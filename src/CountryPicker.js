@@ -294,7 +294,7 @@ export default class CountryPicker extends Component {
 
   render() {
     return (
-      <View>
+      <View style={{ flex: 1, flexDirection: 'row' }}>
         <TouchableOpacity
           style={this.props.style}
           onPress={() => this.setState({ modalVisible: true })}

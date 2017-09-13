@@ -310,6 +310,7 @@ export default class CountryPicker extends Component {
           }
         </TouchableOpacity>
         <Modal
+          animationType="slide"
           visible={this.state.modalVisible}
           onRequestClose={() => this.setState({ modalVisible: false })}
         >

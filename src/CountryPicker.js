@@ -46,7 +46,8 @@ if (isEmojiable) {
   Emoji = <View />;
 }
 
-export const getAllCountries = () => cca2List.map((cca2) => ({ ...countries[cca2], cca2 }));
+export const getAllCountries = () => countries;
+export const getCountry = (cca2) => countries[cca2.toUpperCase()];
 
 const ds = new ListView.DataSource({ rowHasChanged: (r1, r2) => r1 !== r2 });
 
@@ -293,7 +294,7 @@ export default class CountryPicker extends Component {
 
   render() {
     return (
-      <View>
+      <View style={this.props.style}>
         <TouchableOpacity
           onPress={() => this.setState({ modalVisible: true })}
           activeOpacity={0.7}

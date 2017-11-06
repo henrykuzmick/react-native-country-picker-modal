@@ -52,21 +52,6 @@ export const getCountry = (cca2) => countries[cca2.toUpperCase()];
 const ds = new ListView.DataSource({ rowHasChanged: (r1, r2) => r1 !== r2 });
 
 export default class CountryPicker extends Component {
-  static propTypes = {
-    cca2: React.PropTypes.string.isRequired,
-    translation: React.PropTypes.string,
-    onChange: React.PropTypes.func.isRequired,
-    onClose: React.PropTypes.func,
-    closeable: React.PropTypes.bool,
-    filterable: React.PropTypes.bool,
-    children: React.PropTypes.node,
-    countryList: React.PropTypes.array,
-    excludeCountries: React.PropTypes.array,
-    styles: React.PropTypes.object,
-    filterPlaceholder: React.PropTypes.string,
-    autoFocusFilter: React.PropTypes.bool,
-  }
-
   static defaultProps = {
     translation: 'eng',
     countryList: cca2List,

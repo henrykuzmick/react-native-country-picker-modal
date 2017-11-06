@@ -23,10 +23,4 @@ const KeyboardAvoidingView = props => (
   </NativeKeyboardAvoidingView>
 );
 
-KeyboardAvoidingView.propTypes = {
-  offset: React.PropTypes.number,
-  children: React.PropTypes.node,
-  styles: React.PropTypes.array,
-};
-
 export default KeyboardAvoidingView;

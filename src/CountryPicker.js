@@ -309,6 +309,7 @@ export default class CountryPicker extends Component {
       <View>
         <TouchableOpacity
           disabled={this.props.disabled}
+          style={this.props.style}
           onPress={() => this.setState({ modalVisible: true })}
           activeOpacity={0.7}
         >
